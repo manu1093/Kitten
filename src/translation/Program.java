@@ -185,7 +185,8 @@ public class Program {
 				System.out.println("Could not dump the Java bytecode for class " + clazz);
 			}
 	}
-
+	
+	
 	/**
 	 * Takes note that this program contains the given bytecode. This amounts
 	 * to adding some signature to the set of signatures for the program.

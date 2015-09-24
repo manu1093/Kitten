@@ -119,8 +119,8 @@ public class JavaClassGenerator extends ClassGen {
 				field.createField(this);
 		//devo mettere un campo statico per il calcolo del tempo
 		
-		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PUBLIC,Type.LONG,"iTime",factory.getConstantPool()).getField());
-		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PUBLIC,Type.STRING,"testname",factory.getConstantPool()).getField());
+		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PRIVATE,Type.LONG,"iTime",factory.getConstantPool()).getField());
+		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PRIVATE,Type.STRING,"testname",factory.getConstantPool()).getField());
 		
 		
 		// we add the constructors
@@ -144,10 +144,10 @@ public class JavaClassGenerator extends ClassGen {
 		for(TestSignature t:clazz.getTests().values())
 			testk++;
 		ArrayType tTime=new ArrayType(Type.LONG,1);	
-		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PUBLIC,tTime,"tTime",factory.getConstantPool()).getField());
+		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PRIVATE,tTime,"tTime",factory.getConstantPool()).getField());
 		ArrayType SS=new ArrayType(Type.STRING,1);	
-		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PUBLIC,SS,"tRes",factory.getConstantPool()).getField());
-		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PUBLIC,SS,"tName",factory.getConstantPool()).getField());
+		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PRIVATE,SS,"tRes",factory.getConstantPool()).getField());
+		this.addField(new FieldGen(Constants.ACC_STATIC | Constants.ACC_PRIVATE,SS,"tName",factory.getConstantPool()).getField());
 		Type[]a=new Type[1];
 		
 		//PARTE FINALE TABELLA

@@ -27,7 +27,7 @@ public class TestSignature extends CodeSignature{
 		
 		MethodGen methodGen;		
 		methodGen = new MethodGen
-				(Constants.ACC_PUBLIC, // public
+				(Constants.ACC_PRIVATE, // private
 				Type.STRING, // return type
 				TypeList.EMPTY.toBCEL(), // parameters types, if any
 				null, // parameters names: we do not care
